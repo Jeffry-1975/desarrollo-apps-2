@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Styles for Animations and Layout -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1.5rem;
+        }
+        
+        .animated-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-bar {
+            background-color: #4a4a6b;
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 1.5rem;
+            background-color: #ff527b;
+            transition: width 1.5s ease-out;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content {
+            display: none;
+        }
+
+        .main-content.active {
+            display: block;
+        }
+
+        .nav-link.active {
+            color: #ff527b;
+        }
+
+        /* Estilos específicos para la sección de Git */
+        .git-section-box {
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ff527b, #c471ed, #12c2e9) 1;
+            border-radius: 1rem;
+            padding: 2rem;
+            background-color: #242440;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .functionality-card {
+            background-color: #2d2d4d;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .functionality-card:hover {
+            transform: translateY(-5px);
+            background-color: #3a3a5a;
+        }
+
+        .code-step {
+            background-color: #1f1f3a;
+            border-left: 4px solid #12c2e9;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-gray-800 bg-opacity-80 backdrop-blur-md shadow-lg">
+        <nav class="container flex justify-between items-center py-4">
+            <a href="#home" class="text-xl font-bold text-gray-50 uppercase tracking-wide">
+                Mi Portafolio
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300 active" data-target="home">Inicio</a>
+                <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300" data-target="git-content">Git</a>
+                <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300" data-target="github-content">GitHub</a>
+                <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300" data-target="course-content">Proyectos</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-pink-400 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-900 z-40 transform -translate-y-full transition-transform duration-300 md:hidden">
+        <div class="flex justify-end p-6">
+            <button id="close-menu-btn" class="text-gray-300 hover:text-pink-400 focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center space-y-8 text-2xl font-semibold">
+            <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300 active" data-target="home">Inicio</a>
+            <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300" data-target="git-content">Git</a>
+            <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300" data-target="github-content">GitHub</a>
+            <a href="#" class="nav-link text-gray-300 hover:text-pink-400 transition-colors duration-300" data-target="course-content">Proyectos</a>
+        </nav>
+    </div>
+
+    <!-- Main Sections Container -->
+    <main class="pt-24">
+        
+        <!-- Main Portfolio Content -->
+        <div id="home" class="main-content active">
+            <!-- Sección de Inicio -->
+            <section id="inicio" class="h-screen flex flex-col items-center justify-center text-center p-6 bg-cover bg-center">
+                <div class="bg-gray-900 bg-opacity-70 p-8 rounded-xl shadow-2xl animated-section">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-pink-400 mb-4">
+                        TALLER DE DESARROLLO DE APLICACIONES
+                    </h1>
+                    <p class="text-lg md:text-2xl font-light max-w-2xl mx-auto">
+                        La programación orientada a objetos (POO) en Java es un paradigma que estructura el código en "objetos", que son instancias de "clases". Esto facilita la organización, el mantenimiento y la reutilización del código.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Sección Sobre Mí -->
+            <section id="sobre-mi" class="container py-24 animated-section">
+                <h2 class="text-3xl md:text-5xl font-bold text-center text-purple-400 mb-12">Sobre Mí</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="https://placehold.co/400x400/3a3a5a/e0e0e0?text=Tu+Foto" alt="Foto de Perfil" class="rounded-full w-64 h-64 mx-auto object-cover border-4 border-pink-400 shadow-xl">
+                    </div>
+                    <div class="md:w-2/3 text-lg space-y-6">
+                        <p class="text-xl font-semibold">Descripción Profesional:</p>
+                        <p>Soy un desarrollador web con 5 años de experiencia, especializado en el frontend. Me apasiona crear interfaces de usuario intuitivas y dinámicas. Mi enfoque se centra en la usabilidad y la estética, asegurando que cada proyecto no solo funcione a la perfección, sino que también ofrezca una experiencia de usuario memorable.</p>
+                        
+                        <p class="text-xl font-semibold mt-8">Formación y Experiencia:</p>
+                        <p>He completado certificaciones en Desarrollo Web Full Stack y Diseño de Experiencia de Usuario (UX). He trabajado en diversas empresas como desarrollador frontend, participando en el ciclo completo de vida del desarrollo de software, desde la conceptualización hasta la implementación y el mantenimiento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Proyectos -->
+            <section id="proyectos" class="container py-24 bg-gray-800 rounded-xl shadow-lg animated-section">
+                <h2 class="text-3xl md:text-5xl font-bold text-center text-pink-400 mb-12">Proyectos</h2>
+                <div class="mt-16 text-center">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-6">Enlaces de Interés</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <a href="#" class="nav-link bg-gray-900 p-6 rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300" data-target="git-content">
+                            <i class="fab fa-git-alt text-4xl mb-2 text-pink-400"></i>
+                            <h4 class="text-xl font-semibold">Git</h4>
+                        </a>
+                        <a href="#" class="nav-link bg-gray-900 p-6 rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300" data-target="github-content">
+                            <i class="fab fa-github text-4xl mb-2 text-pink-400"></i>
+                            <h4 class="text-xl font-semibold">GitHub</h4>
+                        </a>
+                        <a href="#" class="nav-link bg-gray-900 p-6 rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300" data-target="course-content">
+                            <i class="fas fa-calendar-alt text-4xl mb-2 text-pink-400"></i>
+                            <h4 class="text-xl font-semibold">Proyectos</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Habilidades -->
+            <section id="habilidades" class="container py-24 animated-section">
+                <h2 class="text-3xl md:text-5xl font-bold text-center text-purple-400 mb-12">Habilidades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Columna de Habilidades Técnicas -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-400">Habilidades Técnicas</h3>
+                        <div class="space-y-6">
+                            <!-- Habilidad 1 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>HTML & CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <!-- Habilidad 2 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>JavaScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <!-- Habilidad 3 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>React.js</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <!-- Habilidad 4 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Tailwind CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna de Historial -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-400">Historial Profesional</h3>
+                        <ul class="space-y-6 text-lg">
+                            <li class="p-4 bg-gray-800 rounded-lg shadow-md">
+                                <p class="font-bold">Desarrollador Frontend - Empresa ABC</p>
+                                <p class="text-sm text-gray-400">2021 - Presente</p>
+                                <p>Desarrollo y mantenimiento de interfaces de usuario para aplicaciones web.</p>
+                            </li>
+                            <li class="p-4 bg-gray-800 rounded-lg shadow-md">
+                                <p class="font-bold">Desarrollador Web - Agencia XYZ</p>
+                                <p class="text-sm text-gray-400">2018 - 2021</p>
+                                <p>Construcción de sitios web para clientes, enfocados en la optimización y el rendimiento.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Git -->
+        <div id="git-content" class="main-content container py-24 hidden">
+            <div class="git-section-box animated-section">
+                <h2 class="text-3xl md:text-5xl font-bold text-center text-purple-400 mb-12">
+                    <i class="fab fa-git-alt text-4xl mr-4 text-pink-400"></i>¿Qué es Git?
+                </h2>
+                
+                <!-- Sección: ¿Por qué es necesario? -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-pink-400 mb-4">¿Por qué es necesario?</h3>
+                    <p class="text-lg leading-relaxed">
+                        Git es fundamental para cualquier desarrollador, ya que permite controlar las versiones de un proyecto de manera eficiente. Esto evita la pérdida de trabajo, facilita la colaboración en equipo al permitir que múltiples personas trabajen en el mismo código sin sobrescribirlo, y permite revertir a versiones anteriores si se comete un error. Es, en esencia, la columna vertebral de un desarrollo de software organizado y profesional.
+                    </p>
+                </div>
+                
+                <!-- Sección: Funcionalidades Principales -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-pink-400 mb-4">Funcionalidades Principales</h3>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="functionality-card flex-1">
+                            <i class="fas fa-code-branch text-purple-400 text-3xl mb-2"></i>
+                            <h4 class="text-xl font-semibold mb-2">Ramificación (Branching)</h4>
+                            <p class="text-sm text-gray-300">Permite crear ramas de trabajo aisladas para experimentar con nuevas características sin afectar el código principal.</p>
+                        </div>
+                        <div class="functionality-card flex-1">
+                            <i class="fas fa-clock text-purple-400 text-3xl mb-2"></i>
+                            <h4 class="text-xl font-semibold mb-2">Historial de Versiones</h4>
+                            <p class="text-sm text-gray-300">Cada cambio se registra con un "commit", lo que crea un historial completo y navegable del proyecto.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4">
+                        <div class="functionality-card flex-1">
+                            <i class="fas fa-users text-purple-400 text-3xl mb-2"></i>
+                            <h4 class="text-xl font-semibold mb-2">Colaboración Sencilla</h4>
+                            <p class="text-sm text-gray-300">Facilita la fusión de los cambios de diferentes desarrolladores de manera controlada y sin conflictos.</p>
+                        </div>
+                        <div class="functionality-card flex-1">
+                            <i class="fas fa-undo-alt text-purple-400 text-3xl mb-2"></i>
+                            <h4 class="text-xl font-semibold mb-2">Reversión de Cambios</h4>
+                            <p class="text-sm text-gray-300">Puedes deshacer cambios o volver a una versión anterior del proyecto en cualquier momento.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sección: Funcionamiento -->
+                <div>
+                    <h3 class="text-2xl font-bold text-pink-400 mb-4">FUNCIONAMIENTO</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Un flujo de trabajo común para un nuevo proyecto se desglosa en los siguientes pasos:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="code-step">
+                            <span class="text-purple-400 font-bold">Paso 1: Clonar el Repositorio</span>
+                            <pre class="bg-transparent text-sm mt-2"><code>git clone https://github.com/tu-usuario/nombre-del-repo.git</code></pre>
+                            <p class="text-sm text-gray-400 mt-1">Copia el repositorio remoto a tu máquina local.</p>
+                        </div>
+                        <div class="code-step">
+                            <span class="text-purple-400 font-bold">Paso 2: Navegar al Directorio</span>
+                            <pre class="bg-transparent text-sm mt-2"><code>cd nombre-del-repo</code></pre>
+                            <p class="text-sm text-gray-400 mt-1">Entra al directorio de tu proyecto.</p>
+                        </div>
+                        <div class="code-step">
+                            <span class="text-purple-400 font-bold">Paso 3: Agregar Cambios</span>
+                            <pre class="bg-transparent text-sm mt-2"><code>git add .</code></pre>
+                            <p class="text-sm text-gray-400 mt-1">Agrega los archivos modificados o nuevos al "staging area".</p>
+                        </div>
+                        <div class="code-step">
+                            <span class="text-purple-400 font-bold">Paso 4: Guardar los Cambios (Commit)</span>
+                            <pre class="bg-transparent text-sm mt-2"><code>git commit -m "feat: Agrega un nuevo archivo"</code></pre>
+                            <p class="text-sm text-gray-400 mt-1">Guarda una nueva versión de tu proyecto con un mensaje descriptivo.</p>
+                        </div>
+                        <div class="code-step">
+                            <span class="text-purple-400 font-bold">Paso 5: Enviar los Cambios (Push)</span>
+                            <pre class="bg-transparent text-sm mt-2"><code>git push origin main</code></pre>
+                            <p class="text-sm text-gray-400 mt-1">Sube tus cambios al repositorio remoto en GitHub.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de GitHub -->
+        <div id="github-content" class="main-content container py-24 hidden">
+            <div class="git-section-box animated-section">
+                <h2 class="text-3xl md:text-5xl font-bold text-center text-purple-400 mb-12">
+                    <i class="fab fa-github text-4xl mr-4 text-pink-400"></i>Manual de GitHub
+                </h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    GitHub es una plataforma de hosting para repositorios de Git. Es una red social para desarrolladores donde puedes almacenar tus proyectos, colaborar con otros y mostrar tu trabajo al mundo.
+                </p>
+                <hr class="border-t-2 border-pink-400 mb-8" />
+                
+                <!-- Sección de Planes -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-pink-400 mb-4">Planes de GitHub</h3>
+                    <p class="text-lg leading-relaxed">
+                        GitHub ofrece varios planes, pero para la mayoría de los desarrolladores que trabajan en proyectos personales, el **plan gratuito** es más que suficiente. Este plan incluye:
+                    </p>
+                    <ul class="list-disc list-inside text-lg text-gray-300 mt-4 space-y-2">
+                        <li>**Repositorios públicos y privados ilimitados:** Puedes crear cuantos proyectos necesites, ya sean visibles para todos o solo para ti y tus colaboradores.</li>
+                        <li>**Colaboración en equipo:** Permite que hasta 3 colaboradores trabajen contigo en repositorios privados.</li>
+                        <li>**GitHub Pages:** Te permite alojar sitios web estáticos directamente desde tus repositorios de forma gratuita.</li>
+                    </ul>
+                </div>
+                <hr class="border-t-2 border-pink-400 mb-8" />
+                
+                <h3 class="text-2xl font-bold text-pink-400 mb-6">Guía Paso a Paso para Iniciar en GitHub</h3>
+                <div class="space-y-6">
+                    <!-- Paso 1: Entrar a GitHub -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-home text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 1: Entrar a GitHub</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+                                <li>Para empezar, ve a la página de inicio de GitHub.  Puedes buscar "GitHub" en Google o escribir la dirección directamente: <a href="https://github.com" target="_blank" class="text-pink-400 hover:underline">**https://github.com**</a>.</li>
+                                <li>Una vez en la página, busca el botón que dice **"Sign up"** (o "Registrarse") en la esquina superior derecha. Haz clic en él.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Registrarse -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-user-plus text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 2: Registrarse y Rellenar los Datos</h4>
+                            <p class="text-sm text-gray-300">
+                                Ahora, debes crear tu perfil. Te pedirán algunos datos importantes para tu cuenta:
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+                                <li>**Dirección de correo electrónico:** Es muy importante que sea un correo que uses a menudo, ya que lo necesitarás para verificar tu cuenta y recibir notificaciones.</li>
+                                <li>**Contraseña:** Elige una contraseña que sea fácil de recordar para ti, pero difícil de adivinar para otros. Debe ser de al menos 8 caracteres.</li>
+                                <li>**Nombre de usuario:** Este será el nombre que te identifique en GitHub.  Piensa en un nombre que sea profesional, ya que será parte de la dirección de tus proyectos (ej: `github.com/tu-usuario/mi-proyecto`).</li>
+                                <li>**Preferencias de correo:** Puedes elegir si quieres que GitHub te envíe correos con noticias y actualizaciones. Es opcional.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Activar la Cuenta -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-envelope-open-text text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 3: Activar la Cuenta</h4>
+                            <p class="text-sm text-gray-300">
+                                Para confirmar que tu correo es real, GitHub te enviará un **código de seguridad**.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+                                <li>**Revisa tu correo:** Ve a la bandeja de entrada del correo que usaste para registrarte. Puede que el mensaje esté en la carpeta de "Spam" o "Correo no deseado", ¡así que revisa también allí!</li>
+                                <li>**Ingresa el código:** Copia el código que te enviaron y pégalo en la página de registro de GitHub.</li>
+                            </ul>
+                            <p class="text-sm text-gray-300 mt-2">
+                                Después de esto, ¡tu cuenta estará activada y lista para usarse!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 4: Crear tu Primer Repositorio -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-folder-plus text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 4: Crear tu Primer Repositorio</h4>
+                            <p class="text-sm text-gray-300">
+                                Un **repositorio** es como una carpeta especial donde guardarás tu proyecto. Para crear uno, sigue estos pasos:
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+                                <li>Inicia sesión en tu cuenta. En la esquina superior derecha, haz clic en el signo **'+'** y selecciona **"New repository"**. </li>
+                                <li>**Nombre del repositorio:** Ponle un nombre que describa tu proyecto (ej: `mi-portafolio`). Lo mejor es usar letras minúsculas y guiones (`-`).</li>
+                                <li>**Descripción:** Escribe una frase corta que explique de qué trata tu proyecto.</li>
+                                <li>**Visibilidad:** Elige si será **Público** (cualquiera puede verlo) o **Privado** (solo tú y los colaboradores que elijas pueden verlo).</li>
+                                <li>**README:** **Activa la casilla** "Add a README file". Este archivo es importante porque es la portada de tu proyecto y sirve para dar información sobre él.</li>
+                            </ul>
+                            <p class="text-sm text-gray-300 mt-2">
+                                Cuando termines, haz clic en el botón verde **"Create repository"** y ¡listo! Tu primer repositorio está creado.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 5: Conectar con tu computadora -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-laptop-code text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 5: Conectar GitHub con tu Computadora</h4>
+                            <p class="text-sm text-gray-300">
+                                Para trabajar en tu proyecto desde tu computadora, debes **clonar** el repositorio. Es como hacer una copia local.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+                                <li>Ve a la página de tu repositorio en GitHub y haz clic en el botón verde **"<> Code"**. </li>
+                                <li>Asegúrate de que la pestaña **HTTPS** esté seleccionada y copia la dirección que aparece.</li>
+                            </ul>
+                            <p class="text-sm text-gray-300 mt-2">
+                                Ahora, en tu terminal o Git Bash, escribe este comando (reemplazando la dirección con la que copiaste):
+                            </p>
+                            <pre class="bg-gray-800 text-sm mt-2 p-2 rounded-md"><code>git clone [la_direccion_que_copiaste]</code></pre>
+                            <p class="text-sm text-gray-400 mt-1">
+                                Esto descargará el repositorio a tu computadora, y podrás ver los archivos del proyecto en una carpeta nueva.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 6: Guardar tus Cambios Locales -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-save text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 6: Guardar tus Cambios en la Computadora</h4>
+                            <p class="text-sm text-gray-300">
+                                Cada vez que hagas cambios en tu proyecto (ej: añadas un archivo o cambies algo en el código), debes guardarlos localmente usando dos comandos:
+                            </p>
+                            <div class="code-step mt-2">
+                                <pre class="bg-transparent text-sm"><code>git add .</code></pre>
+                                <p class="text-sm text-gray-400 mt-1">Este comando prepara todos los archivos modificados para ser guardados. (La etapa de "staging")</p>
+                            </div>
+                            <div class="code-step mt-2">
+                                <pre class="bg-transparent text-sm"><code>git commit -m "feat: Agrega mi primer archivo HTML"</code></pre>
+                                <p class="text-sm text-gray-400 mt-1">Con este comando, creas una "fotografía" de tu proyecto en este momento y le pones un mensaje. Es como un punto de guardado.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paso 7: Subir tus Cambios a GitHub -->
+                    <div class="functionality-card flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-upload text-purple-400 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Paso 7: Subir tus Cambios al Repositorio</h4>
+                            <p class="text-sm text-gray-300">
+                                El último paso es enviar los cambios que guardaste en tu computadora a GitHub.
+                            </p>
+                            <ul class="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+                                <li>Abre tu terminal o Git Bash y usa este comando:</li>
+                                <pre class="bg-gray-800 text-sm mt-2 p-2 rounded-md"><code>git push origin main</code></pre>
+                                <li>**`git push`** significa "empujar" los cambios.</li>
+                                <li>**`origin`** es el nombre de tu repositorio en GitHub.</li>
+                                <li>**`main`** es el nombre de la rama principal de tu proyecto.</li>
+                            </ul>
+                            <p class="text-sm text-gray-300 mt-2">
+                                ¡Y listo! Ahora tus cambios estarán visibles en la página de tu repositorio en GitHub para que cualquiera los vea.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de Proyectos -->
+        <div id="course-content" class="main-content container py-24 hidden">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-purple-400 mb-12">Proyectos</h2>
+            <p class="text-lg leading-relaxed mb-8">
+                La programación orientada a objetos (POO) con Java es un enfoque poderoso que nos enseña a pensar en el código como "objetos" que interactúan entre sí. Este paradigma es una base excelente para el aprendizaje, ya que fomenta la organización, la reutilización del código y un entendimiento más profundo de cómo se construyen las aplicaciones complejas.
+            </p>
+
+            <!-- Contenedor para las tarjetas de proyectos -->
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <!-- Tarjeta de la Semana 1 -->
+                <div class="project-card flex-1 min-w-[300px] max-w-[400px] bg-gray-800 p-6 rounded-lg shadow-xl border border-pink-400 flex flex-col">
+                    <div class="mb-4 text-center">
+                        <span class="inline-block px-4 py-1 rounded-full bg-pink-400 text-gray-900 font-bold text-sm uppercase tracking-wide">Semana 1</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-center text-purple-400">Fundamentos de Java y Maven</h4>
+                    <p class="text-sm text-gray-300 mb-4 flex-grow">
+                        En esta semana, aprendimos los conceptos básicos de la sintaxis de Java y cómo configurar un proyecto con Apache Maven, una herramienta fundamental para la gestión de dependencias y el ciclo de vida de la construcción.
+                    </p>
+                    <a href="https://github.com/tu-usuario/semana-1-java-maven" target="_blank" class="text-center text-pink-400 hover:underline transition-colors duration-300 mt-auto">
+                        Ver en GitHub
+                        <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Tarjeta de la Semana 2 -->
+                <div class="project-card flex-1 min-w-[300px] max-w-[400px] bg-gray-800 p-6 rounded-lg shadow-xl border border-pink-400 flex flex-col">
+                    <div class="mb-4 text-center">
+                        <span class="inline-block px-4 py-1 rounded-full bg-pink-400 text-gray-900 font-bold text-sm uppercase tracking-wide">Semana 2</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-center text-purple-400">Programación Orientada a Objetos</h4>
+                    <p class="text-sm text-gray-300 mb-4 flex-grow">
+                        Aquí exploramos los pilares de la POO: clases, objetos, herencia, polimorfismo, encapsulamiento y abstracción. Creamos nuestras primeras clases para modelar objetos del mundo real y entendimos cómo interactúan.
+                    </p>
+                    <a href="https://github.com/tu-usuario/semana-2-poo-java" target="_blank" class="text-center text-pink-400 hover:underline transition-colors duration-300 mt-auto">
+                        Ver en GitHub
+                        <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Tarjeta de la Semana 3 -->
+                <div class="project-card flex-1 min-w-[300px] max-w-[400px] bg-gray-800 p-6 rounded-lg shadow-xl border border-pink-400 flex flex-col">
+                    <div class="mb-4 text-center">
+                        <span class="inline-block px-4 py-1 rounded-full bg-pink-400 text-gray-900 font-bold text-sm uppercase tracking-wide">Semana 3</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-center text-purple-400">Estructuras de Datos y Colecciones</h4>
+                    <p class="text-sm text-gray-300 mb-4 flex-grow">
+                        Enfocados en la eficiencia, estudiamos las principales estructuras de datos en Java, como `ArrayList`, `LinkedList`, `HashMap` y `HashSet`. Analizamos cuándo usar cada una para optimizar el rendimiento de nuestras aplicaciones.
+                    </p>
+                    <a href="https://github.com/tu-usuario/semana-3-estructuras-java" target="_blank" class="text-center text-pink-400 hover:underline transition-colors duration-300 mt-auto">
+                        Ver en GitHub
+                        <i class="fab fa-github ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-center py-6">
+        <p class="text-gray-400 mb-4">&copy; 2024 Nombre del Desarrollador. Todos los derechos reservados.</p>
+        <!-- Sección de Contacto en el Footer -->
+        <div class="flex justify-center items-center space-x-6 text-gray-400">
+            <a href="mailto:tu-correo@ejemplo.com" class="hover:text-pink-400 transition-colors duration-300">
+                <i class="fas fa-envelope text-2xl mr-2"></i>
+                <span class="hidden md:inline">tu-correo@ejemplo.com</span>
+            </a>
+            <a href="https://github.com/tu-usuario" target="_blank" class="hover:text-pink-400 transition-colors duration-300">
+                <i class="fab fa-github text-2xl mr-2"></i>
+                <span class="hidden md:inline">tu-usuario</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript para interactividad -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mainContents = document.querySelectorAll('.main-content');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const sections = document.querySelectorAll('.animated-section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Función para mostrar el contenido principal
+            function showMainContent(targetId) {
+                mainContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                    targetContent.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+
+            // Manejar la navegación por los enlaces principales
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('data-target');
+                    showMainContent(targetId);
+
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    link.classList.add('active');
+
+                    // Cerrar el menú móvil si está abierto
+                    if (mobileMenu.classList.contains('translate-y-0')) {
+                        mobileMenu.classList.remove('translate-y-0');
+                        mobileMenu.classList.add('-translate-y-full');
+                    }
+                });
+            });
+
+            // Lógica para el menú móvil
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('-translate-y-full');
+                mobileMenu.classList.add('translate-y-0');
+            });
+
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+            });
+        });
+    </script>
+</body>
+</html>
