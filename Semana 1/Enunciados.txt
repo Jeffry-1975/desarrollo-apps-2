@@ -1,0 +1,24 @@
+Enunciado 01
+Una tienda ha puesto en oferta la venta de camisas ofreciendo un descuento, por temporada de verano, denominado 7% + 7%. Los cálculos se efectúan de la siguiente manera:
+• El importe de la compra es igual al producto del precio de la camisa por la cantidad de unidades adquiridas.
+• El importe del primer descuento es igual al 7% del importe de la compra.
+• El importe del segundo descuento es igual al 7% de lo que queda de restar el importe de la compra menos el importe del primer descuento.
+• El importe del descuento total es igual a la suma de los dos descuentos anteriores.
+• El importe por pagar es igual al importe de la compra menos el importe del descuento total.
+Agregados:
+• Se dara un precio estandar de 30 soles
+• La cantidad de camisas se manejara en numeros enteros
+
+Enunciado 02
+Una empresa expondrá sus productos en una feria. La empresa considera que el monto total de dinero a invertir estará distribuido de la siguiente manera:
+Rubro 					Porcentaje
+Alquiler de espacio en la feria 	23%
+Publicidad 				7%
+Transporte 				26%
+Servicios feriales 			12%
+Decoración 				21%
+Gastos varios 				11%
+Dado el monto total de dinero a invertir, diseñe un programa que determine cuánto gastará la empresa en cada rubro.
+Agregados:
+• El monto a manejar sera en numeros enteros
+
