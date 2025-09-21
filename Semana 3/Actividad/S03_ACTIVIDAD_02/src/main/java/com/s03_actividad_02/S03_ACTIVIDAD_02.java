@@ -8,7 +8,7 @@ import Vista.AplicaPasaje;
 
 /**
  *
- * @author diego
+ * @author Jeffer
  */
 public class S03_ACTIVIDAD_02 {
 

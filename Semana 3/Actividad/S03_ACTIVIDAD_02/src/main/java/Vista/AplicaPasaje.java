@@ -20,14 +20,14 @@ public class AplicaPasaje extends javax.swing.JFrame {
     
     private void formulario(){
         this.setTitle("Pasaje - Oferta");
-        this.setLocationRelativeTo(null); //APARECE LA VENTANA CENTRADA
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
-        this.setSize(new Dimension(370,170)); //AJUSTA EL TAMAÑO DE LA VENTANA(EJE X-HORIZONTAL; EJE Y-VERTICAL)
-        this.setResizable(false); //EVITA QUE SE ESTIRE O CONTRAIGA LA VENANA
-        this.getContentPane().setBackground(new Color(246, 240, 255)); //EL COLOR DE FONDO GENERAL
-        this.panelIngreso.setBackground(new Color(246, 240, 255)); //EL COLOR DE FONDO DEL PANEL CALCULAR
-        this.panelOperaciones.setBackground(new Color(246, 240, 255)); //EL COLOR DE FONDO DEL PANEL DATOS
-        this.panelResultado.setBackground(new Color(246, 240, 255)); //EL COLOR DE FONDO DEL PANEL DATOS
+        this.setSize(new Dimension(370,170)); 
+        this.setResizable(false); 
+        this.getContentPane().setBackground(new Color(255, 255, 255)); 
+        this.panelIngreso.setBackground(new Color(255, 255, 255)); 
+        this.panelOperaciones.setBackground(new Color(255, 255, 255));
+        this.panelResultado.setBackground(new Color(255, 255, 255)); 
         this.cboCategoria.requestFocus();
     }
     
