@@ -62,7 +62,7 @@ public class AplicaLapiceros extends javax.swing.JFrame {
             }
         });
 
-        btnCalcular.setBackground(new java.awt.Color(51, 120, 250));
+        btnCalcular.setBackground(new java.awt.Color(50, 100, 204));
         btnCalcular.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCalcular.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcular.setMnemonic('C');
@@ -75,7 +75,7 @@ public class AplicaLapiceros extends javax.swing.JFrame {
             }
         });
 
-        btnNuevo.setBackground(new java.awt.Color(40, 215, 143));
+        btnNuevo.setBackground(new java.awt.Color(0, 215, 100));
         btnNuevo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevo.setMnemonic('N');
@@ -88,7 +88,7 @@ public class AplicaLapiceros extends javax.swing.JFrame {
             }
         });
 
-        btnSalir.setBackground(new java.awt.Color(255, 100, 50));
+        btnSalir.setBackground(new java.awt.Color(255, 20, 60));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setMnemonic('S');
@@ -166,7 +166,7 @@ public class AplicaLapiceros extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 100, 80));
         jLabel2.setText("Cantidad de Docenas:");
 
         txtDocenas.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +184,7 @@ public class AplicaLapiceros extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel4.setForeground(new java.awt.Color(255, 100, 80));
         jLabel4.setText("Precio por Docenas:");
 
         txtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {

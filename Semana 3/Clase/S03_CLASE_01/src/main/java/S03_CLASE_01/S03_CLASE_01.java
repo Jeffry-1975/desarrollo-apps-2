@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.s03_actividad_02;
+package S03_CLASE_01;
 
-import Vista.AplicaPasaje;
+import Vista.AplicaCuadrado;
 
 /**
  *
  * @author Jeffer
  */
-public class S03_ACTIVIDAD_02 {
+public class S03_CLASE_01 {
 
     public static void main(String[] args) {
-        AplicaPasaje pasaje1 = new AplicaPasaje();
-        pasaje1.setVisible(true);
+        AplicaCuadrado objCua = new AplicaCuadrado();
+        objCua.setVisible(true);
     }
 }

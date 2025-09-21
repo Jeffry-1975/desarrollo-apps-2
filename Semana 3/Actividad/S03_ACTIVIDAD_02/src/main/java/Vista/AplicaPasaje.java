@@ -77,7 +77,7 @@ public class AplicaPasaje extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(139, 149, 255));
+        jLabel2.setForeground(new java.awt.Color(50, 149, 255));
         jLabel2.setText("Cantidad de Pasajes:");
 
         txtPasaje.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +95,7 @@ public class AplicaPasaje extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(139, 149, 255));
+        jLabel3.setForeground(new java.awt.Color(50, 149, 255));
         jLabel3.setText("Turno:");
 
         javax.swing.GroupLayout panelIngresoLayout = new javax.swing.GroupLayout(panelIngreso);
@@ -126,7 +126,7 @@ public class AplicaPasaje extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
         );
 
-        btnCalcular.setBackground(new java.awt.Color(51, 154, 204));
+        btnCalcular.setBackground(new java.awt.Color(50, 100, 204));
         btnCalcular.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCalcular.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcular.setMnemonic('C');
@@ -139,7 +139,7 @@ public class AplicaPasaje extends javax.swing.JFrame {
             }
         });
 
-        btnNuevo.setBackground(new java.awt.Color(0, 215, 143));
+        btnNuevo.setBackground(new java.awt.Color(0, 215, 100));
         btnNuevo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevo.setMnemonic('N');
@@ -152,7 +152,7 @@ public class AplicaPasaje extends javax.swing.JFrame {
             }
         });
 
-        btnSalir.setBackground(new java.awt.Color(255, 146, 153));
+        btnSalir.setBackground(new java.awt.Color(255, 20, 60));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setMnemonic('S');
