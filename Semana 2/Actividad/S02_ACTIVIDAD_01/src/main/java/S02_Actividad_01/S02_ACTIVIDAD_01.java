@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.s02_actividad_01;
+package S02_Actividad_01;
 
 import Vista.AplicaLapicero;
 

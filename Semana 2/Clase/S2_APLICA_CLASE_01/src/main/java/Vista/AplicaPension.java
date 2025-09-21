@@ -116,7 +116,7 @@ public class AplicaPension extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCalcular.setBackground(new java.awt.Color(51, 154, 204));
+        btnCalcular.setBackground(new java.awt.Color(50, 100, 204));
         btnCalcular.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCalcular.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcular.setMnemonic('C');
@@ -129,7 +129,7 @@ public class AplicaPension extends javax.swing.JFrame {
             }
         });
 
-        btnNuevo.setBackground(new java.awt.Color(0, 215, 143));
+        btnNuevo.setBackground(new java.awt.Color(0, 215, 100));
         btnNuevo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevo.setMnemonic('N');
@@ -142,7 +142,7 @@ public class AplicaPension extends javax.swing.JFrame {
             }
         });
 
-        btnSalir.setBackground(new java.awt.Color(255, 146, 153));
+        btnSalir.setBackground(new java.awt.Color(255, 20, 60));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setMnemonic('S');
@@ -180,11 +180,11 @@ public class AplicaPension extends javax.swing.JFrame {
         );
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(30, 50, 100));
+        jLabel1.setForeground(new java.awt.Color(255, 100, 80));
         jLabel1.setText("Categoría:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(30, 50, 100));
+        jLabel2.setForeground(new java.awt.Color(255, 100, 80));
         jLabel2.setText("Promedio:");
 
         txtPromedio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N

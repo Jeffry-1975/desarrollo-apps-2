@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.s02_actividad_02;
+package S02_ACTIVIDAD_02;
 
 import Vista.AplicaSueldo;
 

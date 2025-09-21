@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.s2_aplica_clase_01;
+package S2_APLICA_CLASE_01;
 
 import Vista.AplicaPension;
 
