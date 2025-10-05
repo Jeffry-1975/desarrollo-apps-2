@@ -1,18 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+    package com.s04_actividad_01;
 
-package com.s04_actividad_01;
+import Controlador.Controlador_figuras;
+import Modelo.Circulo;
+import Modelo.Cuadrado;
+import Modelo.Triangulo;
+import Vista.VistaCuadrado;
 
-import Vista.AplicaLapiceros;
-
-/**
- *
- * @author Jeffer
- */
 public class S04_ACTIVIDAD_01 {
-
     public static void main(String[] args) {
-        new AplicaLapiceros().setVisible(true);
+        Cuadrado modeloCuadrado = new Cuadrado();
+        Triangulo modeloTriangulo = new Triangulo();
+        Circulo modeloCirculo = new Circulo();
+        VistaCuadrado vista = new VistaCuadrado();
+        Controlador_figuras controlador = new Controlador_figuras(modeloCuadrado, modeloTriangulo, modeloCirculo, vista);
+        vista.setVisible(true);
     }
 }

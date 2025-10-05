@@ -1,0 +1,349 @@
+
+package Vista;
+
+import Clases.Cuadrado;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
+public class AplicaCuadrado extends javax.swing.JFrame {
+    Cuadrado cua = new Cuadrado();
+
+    public AplicaCuadrado() {
+        initComponents();
+        formulario();
+    }
+    
+    private void formulario(){
+        this.setTitle("Área - Cuadrado");
+        this.setLocationRelativeTo(null); 
+        this.setVisible(true);
+        this.setSize(new Dimension(400,200));
+        this.setResizable(false);
+        this.getContentPane().setBackground(new Color(255, 255, 255));
+        this.panelIngreso.setBackground(new Color(255, 255, 255)); 
+        this.panelOperaciones.setBackground(new Color(255, 255, 255));
+        this.panelResultado.setBackground(new Color(255, 255, 255)); 
+    }
+    
+    private void valIniciales(){
+        this.panelIngreso.setVisible(true);
+        this.panelOperaciones.setVisible(true);
+        this.panelResultado.setVisible(false);
+        this.btnCalcular.setEnabled(false);
+        this.btnNuevo.setEnabled(false);
+        this.btnSalir.setEnabled(true);
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        panelIngreso = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        txtLado = new javax.swing.JTextField();
+        panelOperaciones = new javax.swing.JPanel();
+        btnCalcular = new javax.swing.JButton();
+        btnNuevo = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        panelResultado = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        txtResultado = new javax.swing.JTextField();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(50, 149, 255));
+        jLabel2.setText("Ingrese Lado:");
+
+        txtLado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLadoActionPerformed(evt);
+            }
+        });
+        txtLado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtLadoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtLadoKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelIngresoLayout = new javax.swing.GroupLayout(panelIngreso);
+        panelIngreso.setLayout(panelIngresoLayout);
+        panelIngresoLayout.setHorizontalGroup(
+            panelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelIngresoLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtLado, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelIngresoLayout.setVerticalGroup(
+            panelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelIngresoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtLado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnCalcular.setBackground(new java.awt.Color(50, 100, 204));
+        btnCalcular.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCalcular.setForeground(new java.awt.Color(255, 255, 255));
+        btnCalcular.setMnemonic('C');
+        btnCalcular.setText("Calcular");
+        btnCalcular.setToolTipText("Clic para calcular");
+        btnCalcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
+
+        btnNuevo.setBackground(new java.awt.Color(0, 215, 100));
+        btnNuevo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setMnemonic('N');
+        btnNuevo.setText("Nuevo");
+        btnNuevo.setToolTipText("Clic para nuevo");
+        btnNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setBackground(new java.awt.Color(255, 20, 60));
+        btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setMnemonic('S');
+        btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Clic para salir");
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel1.setText("Operaciones");
+
+        javax.swing.GroupLayout panelOperacionesLayout = new javax.swing.GroupLayout(panelOperaciones);
+        panelOperaciones.setLayout(panelOperacionesLayout);
+        panelOperacionesLayout.setHorizontalGroup(
+            panelOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelOperacionesLayout.createSequentialGroup()
+                .addGroup(panelOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelOperacionesLayout.createSequentialGroup()
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelOperacionesLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jLabel1)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panelOperacionesLayout.setVerticalGroup(
+            panelOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelOperacionesLayout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalcular)
+                    .addComponent(btnNuevo)
+                    .addComponent(btnSalir))
+                .addGap(25, 25, 25))
+        );
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(50, 149, 255));
+        jLabel3.setText("Área:");
+
+        javax.swing.GroupLayout panelResultadoLayout = new javax.swing.GroupLayout(panelResultado);
+        panelResultado.setLayout(panelResultadoLayout);
+        panelResultadoLayout.setHorizontalGroup(
+            panelResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelResultadoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
+        );
+        panelResultadoLayout.setVerticalGroup(
+            panelResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelResultadoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelOperaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelOperaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(119, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        float lado;
+        
+        if (txtLado.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese un Valor");
+        }else{
+            lado = Float.parseFloat(txtLado.getText().trim());
+            cua.setLado(lado);
+            cua.hallarArea();
+            this.txtResultado.setText(String.valueOf(cua.mostrarArea()));
+            this.setSize(new Dimension(370,220));
+            this.panelResultado.setVisible(true);
+            this.btnNuevo.setEnabled(true);
+            this.panelResultado.setBackground(new Color(246, 240, 255));
+        }
+        this.txtLado.requestFocus();
+        this.btnCalcular.setEnabled(false);
+        this.txtLado.setEnabled(false);
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+        // TODO add your handling code here:
+        this.txtLado.setText("");
+        this.txtResultado.setText("");
+        this.setSize(new Dimension(370,170));
+        this.panelResultado.setVisible(false);
+        this.txtLado.requestFocus();
+        this.btnNuevo.setEnabled(false);
+        this.btnCalcular.setEnabled(false);
+        this.txtLado.setEnabled(true);
+    }//GEN-LAST:event_btnNuevoActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        int r = JOptionPane.showOptionDialog(this, "Estas seguro de salir..?", "Área - Cuadrado", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[]{"Si Salgo", "No Salgo"}, "No salgo");
+        if (r == 0) {
+            System.exit(0);
+        }
+        this.txtLado.requestFocus();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void txtLadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLadoKeyTyped
+        // TODO add your handling code here:
+        this.btnCalcular.setEnabled(true);
+        char keyChar = evt.getKeyChar();
+        
+        if (!Character.isDigit(keyChar) && keyChar != '.') {
+            evt.consume();
+        }
+        
+        if (keyChar == '.' && txtLado.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtLadoKeyTyped
+
+    private void txtLadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLadoActionPerformed
+        // TODO add your handling code here:
+        this.btnCalcular.doClick();
+        this.txtLado.setText("");
+        this.txtLado.requestFocus();
+        this.btnCalcular.setEnabled(false);
+        this.btnNuevo.setEnabled(true);
+    }//GEN-LAST:event_txtLadoActionPerformed
+        
+    private void txtLadoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLadoKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            btnCalcular.doClick();
+        }
+    }//GEN-LAST:event_txtLadoKeyPressed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+        valIniciales();
+    }//GEN-LAST:event_formWindowActivated
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(AplicaCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(AplicaCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(AplicaCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(AplicaCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new AplicaCuadrado().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalcular;
+    private javax.swing.JButton btnNuevo;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel panelIngreso;
+    private javax.swing.JPanel panelOperaciones;
+    private javax.swing.JPanel panelResultado;
+    private javax.swing.JTextField txtLado;
+    private javax.swing.JTextField txtResultado;
+    // End of variables declaration//GEN-END:variables
+}

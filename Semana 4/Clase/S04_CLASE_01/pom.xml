@@ -9,7 +9,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>com.s03_clase_01.S04_CLASE_01</exec.mainClass>
+        <exec.mainClass>com.s04_clase_01.S04_CLASE_01</exec.mainClass>
     </properties>
-    <name>S04_CLASE_01</name>
 </project>
