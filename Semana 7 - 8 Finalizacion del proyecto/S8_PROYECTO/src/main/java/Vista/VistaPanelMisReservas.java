@@ -608,7 +608,7 @@ public class VistaPanelMisReservas extends javax.swing.JPanel {
             .addGroup(panelSuperiorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitulo)
-                .addGap(267, 267, 267)
+                .addGap(387, 387, 387)
                 .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
