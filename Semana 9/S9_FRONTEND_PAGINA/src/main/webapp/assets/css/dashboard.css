@@ -1,0 +1,124 @@
+/* Estilos para los dashboards */
+
+/* --- ESTILO DE BOTÓN CON RELLENO PROGRESIVO --- */
+.btn-fill {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 9999px;
+    overflow: hidden;
+    transition: color 0.4s ease-out;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3b82f6;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+}
+
+.btn-fill:hover {
+    color: #ffffff;
+}
+
+.btn-fill:hover::before {
+    transform: scaleX(1);
+}
+
+/* Estilo alternativo (botón ya relleno que se oscurece) */
+.btn-fill-solid {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #3b82f6;
+    color: #ffffff;
+    background-color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: color 0.4s ease-out;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* --- ESTILOS DE TARJETAS FLOTANTES --- */
+.dashboard-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Estilos específicos para cada dashboard */
+.student-dashboard {
+    background-color: #eff6ff;
+}
+
+.teacher-dashboard {
+    background-color: #f0fdf4;
+}
+
+.admin-dashboard {
+    background-color: #f8fafc;
+}
+
+/* Estilos para el encabezado del dashboard */
+.dashboard-header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el contenido del dashboard */
+.dashboard-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Estilos para las tarjetas del dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.dashboard-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card p {
+    color: #4b5563;
+}
