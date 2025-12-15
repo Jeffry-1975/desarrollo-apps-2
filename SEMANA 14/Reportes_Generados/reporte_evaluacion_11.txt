@@ -1,0 +1,105 @@
+========================================================
+ INFORME DETALLADO DE EVALUACIÓN DE TESIS
+========================================================
+
+ID de Evaluación: 11
+Fecha de Evaluación: 2025-11-20 20:19:19.0
+
+--------------------------------------------------------
+ DATOS DE LA TESIS
+--------------------------------------------------------
+Estudiante: Diego Arturo Flores Yupanqui
+Título: Sistema Web para Educación con Inteligencia Artificial
+Docente Revisor: Raúl Fernández Bejarano
+
+--------------------------------------------------------
+ RESULTADO DE LA EVALUACIÓN
+--------------------------------------------------------
+PUNTAJE TOTAL: 5.0 / 38.0
+CONDICIÓN: Desaprobado con observaciones mayores
+
+Comentarios Generales del Docente:
+----------------------------------
+CORREGIR URGENTE
+
+--------------------------------------------------------
+ DETALLE DE LA RÚBRICA (C=1.0, CP=0.5, NC=0.0)
+--------------------------------------------------------
+
+I. Título
+- 1. Concordancia...                           : 0.0
+
+II. Resumen/Abstract
+- 2. Contempla objetivo, metodología...        : 0.0
+- 3. No excede 250 palabras...                 : 0.0
+
+III. Introducción
+- 4. Sintetiza tema...                         : 0.0
+
+IV. Problema
+- 5. Describe problema científico...           : 0.0
+- 6. Formulación del problema...               : 1.0
+
+V. Justificación
+- 7. Justificación social...                   : 0.0
+- 8. Justificación teórica...                  : 0.0
+- 9. Justificación metodológica...             : 0.0
+
+VI. Objetivos
+- 10. Objetivo general...                      : 0.0
+- 11. Objetivos específicos...                 : 0.0
+
+VII. Aspectos éticos
+- 12. Describe implicancias éticas...          : 0.0
+
+VIII. Marco Teórico
+- 13. Antecedentes (objetivo, meto...).        : 1.0
+- 14. Antecedentes (artículos/tesis < 5 años...).: 1.0
+- 15. Bases teóricas...                        : 1.0
+- 16. Marco conceptual...                      : 1.0
+
+IX. Hipótesis
+- 17. Hipótesis claras...                      : 0.0
+
+X. Variables
+- 18. Identifica, clasifica y describe...      : 0.0
+- 19. Operacionaliza variables...              : 0.0
+
+XI. Metodología
+- 20. Método general y específico.             : 0.0
+- 21. Tipo de investigación.                   : 0.0
+- 22. Nivel de investigación.                  : 0.0
+- 23. Diseño de investigación.                 : 0.0
+- 24. Características de la población.         : 0.0
+- 25. Muestra (cálculo, criterios).            : 0.0
+- 26. Técnica/instrumento (confiabilidad, validez).: 0.0
+- 27. Técnicas de procesamiento.               : 0.0
+- 28. Procedimiento de contrastación.          : 0.0
+
+XII. Resultados
+- 29. Presentación (tablas/gráficos).          : 0.0
+- 30. Contrastación de hipótesis (inferencial).: 0.0
+
+XIII. Análisis y discusión
+- 31. Redacta en orden (objetivo/variable).    : 0.0
+- 32. Contrasta resultados con antecedentes.   : 0.0
+
+XIV. Conclusiones
+- 33. Nivel de alcance (objetivos, hipótesis). : 0.0
+
+XV. Recomendaciones
+- 34. Derivadas de conclusiones.               : 0.0
+
+XVI. Referencias
+- 35. Según norma bibliográfica.               : 0.0
+
+XVII. Anexos
+- 36. Anexos exigidos en orden.                : 0.0
+
+XVIII. Aspectos de Forma
+- 37. Formato del Reglamento.                  : 0.0
+- 38. Documento ordenado, formato adecuado.    : 0.0
+
+========================================================
+ Fin del Reporte
+========================================================
